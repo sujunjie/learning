@@ -1,10 +1,13 @@
 <?php
+/**
+ * 异步上传多个文件，并显示上传进度
+ */
+
 //var_dump($_POST);
 //var_dump($_FILES);
-//echo phpinfo();
+
 if (!empty($_FILES)) {
     //header('Content-type: ' . $type);
-    //echo file_get_contents($file);
     $uploadFiles = array();
     foreach ($_FILES as $file) {
         array_push($uploadFiles,$file['name']);
