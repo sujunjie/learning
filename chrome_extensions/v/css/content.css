@@ -1,0 +1,17 @@
+/* 横框 */
+.bd-cxzyj-warning{position:fixed;z-index:99999999;height:50px;line-height:50px;opacity:0.9;width:100%;text-align:center;color:#FFF;font-weight:bolder;overflow:hidden;font-size:14px;background-repeat:no-repeat;font-family: "微软雅黑";min-width:650px;}
+.bd-cxzyj-warning .icon{background-position:center center;background-repeat:no-repeat;width:40px;height:50px;display:inline-block;margin-right:8px;}
+.bd-cxzyj-green{background-color:#33bd7a;}
+.bd-cxzyj-red{background-color:#de5636;}
+.bd-cxzyj-blue{background-color:#4991f4;}
+.bd-cxzyj-yellow{background-color:#7178c0;}
+.bd-cxzyj-warning span{vertical-align:text-bottom;}
+.bd-cxzyj-warning .close-x{position:absolute;right:18px;display:block;width:24px;height:24px;top:13px;background-position:center center;background-repeat:no-repeat;cursor:pointer;}
+
+/* 红弹 */
+.bd-cxzyj-hinder{width:100%;height:100%;top:0;left:0;z-index:2147483647;position:fixed;background-color:#555555;opacity:0.9;}
+.bd-cxzyj-danger{z-index:2147483647;position:fixed;background-position:center center;background-repeat:no-repeat;width:400px; height:260px; overflow:hidden;font-family:"微软雅黑";font-size:12px;}
+.bd-cxzyj-danger .danger-desc{color: white;text-align: center;position: absolute;width: 400px;top: 146px;font-weight: bold;}
+.bd-cxzyj-danger .bd-cxzyj-btn{display:block;position:absolute;top:203px;width:140px;height:36px;line-height:36px;background:#dfdfdf;text-align:center;cursor:pointer;border:1px solid #dbdbdb;border-radius:2px;}
+.bd-cxzyj-danger #bd-cxzyj-close-btn{left:28px;border:1px solid #8abbfe;color:#4890f5;background-color:#fff;}
+.bd-cxzyj-danger #bd-cxzyj-keep-btn{left:230px;}

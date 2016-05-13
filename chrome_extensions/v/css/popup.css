@@ -1,0 +1,44 @@
+body{margin:0;padding:0;width:280px;height:auto;font-size:12px;font-family:"Microsoft YaHei"; -webkit-user-select: none;cursor:default;}
+a{color:#4991f4;}
+#head{width:280px; height:76px;}
+#head .head-title{padding: 44px 20px 0px 10px;color: white;}
+.green{background:url("../icons/green_h.png") left top no-repeat; }
+.yellow{background:url("../icons/yellow_h.png") top left no-repeat; }
+.red{background:url("../icons/red_h.png") top left no-repeat; }
+#redMain,#greenMain,#yellowMain{position:relative;color:#485766;background-color: #ffffff;}
+#foot{height:26px; background:#dfdfdf;clear:both;}
+#xinyu{line-height:26px; color:#7f7f7f; float:left; margin-left:10px;}
+#jubao{line-height:26px;float:right; margin-right:10px;text-decoration:underline;cursor:pointer;}
+#jubao:hover{text-decoration:underline;}
+#config{display:block; height:22px; width:22px;margin-top:8px;cursor:pointer;float:right;margin-right:7px;}
+
+#vIcon{background-image:url("../icons/vmp_ad_icons.png");background-repeat:no-repeat;background-position: center center;width:76px;height:60px;float:left;margin-left:6px;}
+#vIcon.v3{background-position:7px -115px;}
+#vIcon.v2{background-position:7px -55px;}
+#vIcon.v1{background-position:7px 5px;}
+
+.mainTitle{font-weight:bold;padding:10px 10px 5px 10px; width:260px;clear:both;}
+#company{padding-bottom:15px;}
+
+#levelInfo{}
+#levelInfo p{margin:0;padding:0;line-height:20px;}
+
+.webInfo{padding:0px 15px 10px 20px;border:none; border-spacing:0px;}
+.webInfo tr{height:20px; line-height:20px;}
+table,tr,td{margin:0;padding:0;}
+
+.auth-tag{margin-right: 17px;vertical-align: top;margin-left:25px; float:left;padding:3px 0;}
+.auth-tag i{display:inline-block; width:12px;height:12px;background:url("../icons/vmp_icons_v4.png") no-repeat;background-position:0 -110px;margin-bottom:-1px;margin-right:3px;white-space:nowrap;text-overflow:ellipsis;}
+
+.rzlist:after{content:'';display:table;clear:both;}
+.hide{display:none;}
+
+#redMark{background:url("../icons/red_m.png") center center no-repeat; margin:10px; width:100px; height:100px; float:left;}
+#redInfo p{margin:0;padding:0;display:table-cell;font-weight:bolder;vertical-align:middle;height:120px;}
+.zanwu{padding:0px 15px 10px 20px;border:none; border-spacing:0px; color:#CCC;}
+
+#yellowMark{background:url("../icons/yellow_m.png") center center no-repeat; margin:10px;width:100px; height:100px; float:left;}
+#yellowInfo p{margin:0;padding:0;font-weight:bolder; line-height:20px; height:20px;}
+#yellowInfo{padding-top: 40px;height: 80px;}
+
+#siteName{max-width:180px;}

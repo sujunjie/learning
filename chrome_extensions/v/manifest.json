@@ -1,0 +1,36 @@
+{
+	"name":"诚信照妖镜",
+	"version":"1.0.3",
+	"manifest_version":2,
+	"description":"帮助用户实时了解当前正在访问网站的安全和信誉信息！",
+	"page_action":{
+		"default_icon":"icons/greenicon.png"
+		//"default_popup":"html/popup.html"
+	},
+	"background":{
+		"page":"html/bg.html"
+	},
+	"content_scripts":[
+		{
+      		"js":["js/jquery-2.1.1.min.js","js/content.js"],
+      		"css":["css/content.css"],
+     	 	"matches":["http://*/*","https://*/*"],
+      		"run_at":"document_start"
+   		}	
+   	],
+	"permissions":["tabs","http://*/*","https://*/*","cookies"],
+	"icons":{
+    	"160":"icons/160.png",
+		"64":"icons/64.png",
+		"16":"icons/16.png"
+   	},
+   	"web_accessible_resources":[
+   		"icons/red_w.png",
+   		"icons/yellow_w.png",
+   		"icons/green_w.png",
+   		"icons/red_alert.png",
+	    "icons/left_w.png",
+	    "icons/x.png"
+   	]
+   	//"content_security_policy": "script-src 'self' 'unsafe-eval';object-src 'self';"   
+}

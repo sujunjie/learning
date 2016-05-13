@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/popup.css">
+		<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="../js/popup.js"></script>
+	</head>
+
+	<body>
+
+		<div id="head" class="green">
+            <a id="config" href="setting.html" target="_blank"></a>
+            <div class="head-title">该网站已核验无风险，请放心访问</div>
+		</div>
+		<div id="yellowMain" class="hide">
+			<div class="c-row">
+				<div id="yellowMark"></div>
+				<div id="yellowInfo">
+					<p>该网站信息</p><p>未经认证核验</p>
+				</div>
+			</div>
+		</div>
+		<div id="redMain" class="hide">
+			<div class="c-row">
+				<div id="redMark"></div>
+				<div id="redInfo">
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<div id="greenMain" class="hide">
+			<div class="c-row">
+				<div id="company" class="mainTitle"></div>
+			</div>
+			<div class="c-row">
+				<div id="vIcon"></div>
+				<div id="levelInfo"></div>
+			</div>
+			<div class="c-row">
+				<div class="mainTitle">认证信息</div>
+				<div class="rzlist">
+					<span id='isRealNameAuth' class="auth-tag"><i></i>实名认证</span>
+					<span id='isFieldAuth' class="auth-tag"><i></i>实地认证</span>			
+					<span id='tradeAuthInfo' class="auth-tag"><i></i>行业认证</span>
+					<span id='isSafeSite' class="auth-tag"><i></i>网站病毒检测</span>
+				</div>
+					
+			</div>
+			<div class="c-row">
+				<div class="mainTitle">网站信息</div>
+			</div>
+			<table class="webInfo">
+				<tr>
+					<td>网站类型：</td>
+					<td id='custType'></td>
+				</tr>
+				<tr>
+					<td>网站名称：</td>
+					<td id='siteName'></td>
+				</tr>
+				<tr>
+					<td>ICP备案：</td>
+					<td id="icp"></td>
+				</tr>
+			</table>
+		</div>
+		<div id="foot">
+			<span id="xinyu">百度信誉与第三方认证机构联合提供</span>
+			<a id="jubao" href="" target="_blank">举报</a>
+		</div>
+	</body>
+</html>

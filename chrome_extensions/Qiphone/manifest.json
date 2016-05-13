@@ -1,0 +1,26 @@
+{
+	"name":"wolegedaX",
+	"version":"1.0.0",
+	"manifest_version":2,
+	"description":"we two, who and who !!!!",
+	"browser_action":{
+		"default_icon":"icons/19.png",
+		"default_popup":"html/popup.html"
+	},
+	"background":{
+		"page":"html/bg.html"
+	},
+	"content_scripts":[
+		{
+      		"js":["js/jquery-2.1.1.min.js","js/content.js"],
+     	 	"matches":["http://*/*","https://*/*","file:///C:/Users/sujunjie/Desktop/testq.html"],
+      		"run_at":"document_start"
+   		}	
+   	],
+	"permissions":["tabs","http://*/*","https://*/*","cookies","file:///C:/Users/sujunjie/Desktop/testq.html"],
+	"icons":{
+	        "160":"icons/160.png",
+	        "48":"icons/48.png",
+    	        "19":"icons/19.png"
+   	}
+}

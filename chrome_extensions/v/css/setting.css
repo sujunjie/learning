@@ -1,0 +1,18 @@
+body{font-family:"Microsoft YaHei";font-size:12px;}
+.main{width:480px;height:340px;background:url(../icons/setting.png) center center no-repeat scroll; border-radius: 8px;box-shadow: 0 0 4px #999;overflow:hidden;position:fixed;}
+.radio{position:absolute;left:10px;top:130px;width:80px;height:128px;cursor:pointer;}
+#auto{left:47px;}
+#light{left:147px;}
+#dark{left:247px;}
+#off{left:347px;}
+.radio i{position:absolute;left:31px;top:116px;width:16px;height:16px;}
+.radio:hover i{background:url(../icons/radio.png) -7px -31px no-repeat;}
+.main div.selected i{background:url(../icons/radio.png) -6px -4px no-repeat;}
+.btn{display:block;position:absolute;top:292px;width:140px;height:36px;line-height:36px;background:#dfdfdf;text-align:center;cursor:pointer;border:1px solid #dbdbdb;border-radius:2px;}
+.btn:hover{box-shadow:0px 0px 4px #8abbfe;}
+#submit{left:50px;border:1px solid #8abbfe;color:#4890f5;background-color:#fff;}
+#cancel{left:290px;}
+
+#off i{left:35px;}
+#light:hover i,#dark:hover i{background-position:-6px -31px;}
+#light.selected i,#dark.selected i{background-position:-6px -4px;}
