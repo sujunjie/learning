@@ -1,0 +1,91 @@
+<?php
+//var_dump($_POST);
+//var_dump($_FILES);
+//echo phpinfo();
+if (!empty($_FILES)) {
+    //header('Content-type: ' . $type);
+    //echo file_get_contents($file);
+    $uploadFiles = array();
+    foreach ($_FILES as $file) {
+        array_push($uploadFiles,$file['name']);
+    }
+    echo json_encode($uploadFiles);
+    exit;
+}
+?>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #upload{display:none;}
+            #progress{display:none;}
+        </style>
+    </head>
+
+    <body>
+        <form action="" method="post" enctype="multipart/form-data">
+            <input id="upload" name="upload" type="file" multiple="multiple">
+            <button id="btn-upload">
+                上传文件
+            </button>
+        </form>
+        <progress id="progress"></progress>
+        <div id="tips"></div>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $('#upload').change(
+                    function(){
+                        if (!$(this).val()) {
+                            return false;
+                        }
+                        
+                        // 创建form对象
+                        var formData = new FormData();
+                        var o_files = $('#upload').get(0).files;
+                        // 支持多文件上传
+                        for (var i = 0; i < o_files.length; i++) {
+                            formData.append('upload' + i, o_files[i]);
+                        }
+
+                        $.ajax({
+                            url: '',
+                            type: 'post',
+                            data: formData,
+                            contentType: false,
+                            processData: false,
+                            dataType: 'json',
+                            xhr: function () {
+                                var myXhr = $.ajaxSettings.xhr();
+                                if (myXhr.upload) {
+                                    myXhr.upload.addEventListener('progress',progressHandlingFunction, false);
+                                }
+                                return myXhr;
+                            },
+                            success: function (data) {
+                                $('#progress').hide();
+                                var tips = '文件：' + data.join(';') + ' 上传成功';
+                                $('#tips').text(tips);
+                            }
+                        });
+
+                    }
+                );
+                $('#btn-upload').click(
+                    function(){
+                        $('#upload').trigger('click');
+                        return false;
+                    }
+                );
+
+                function progressHandlingFunction (e) {
+                    if (e.lengthComputable) {
+                        $('progress').show().attr({value:e.loaded,max:e.total});
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
