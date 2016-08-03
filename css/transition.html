@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@-webkit-keyframes "rotate" {
+    0% {
+    -webkit-transform: rotate(0deg);
+    transform: translate3d(0px,0,300px) scale(1) rotate(0deg);
+    }
+
+    100% {
+    -webkit-transform: rotate(360deg);
+    transform: translate3d(0px,0,300px) scale(1) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes "rotatey" {
+    0% {
+        -moz-transform: perspective(500px) rotateY(60deg);
+        transform: perspective(500px) rotateY(60deg)
+    }
+
+    100% {
+        -moz-transform: perspective(500px) rotateY(420deg);
+        transform: perspective(500px) rotateY(420deg)
+    }
+}
+
+
+html{
+    font-size:10px;
+}
+
+.desk {
+    position: absolute;
+    left:40%;
+    top:20%;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateY(60deg);
+    animation: rotatey 5s linear infinite; 
+}
+
+.an {
+    opacity:.4;
+    position: absolute;
+    width:200px;
+    height:200px;
+    border:none;
+    border-radius:100px;
+    box-shadow:0 0 5px #777;
+    background-image:url('me.png');
+    transform-style: preserve-3d;
+    -webkit-animation: rotate 2s linear infinite;
+    -moz-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite; 
+}
+
+</style>    
+</head>
+<body>
+    <div class="desk">
+        <div class="an"></div>
+    </div>
+
+</body>
+</html>
