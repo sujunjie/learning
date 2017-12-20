@@ -1,15 +1,15 @@
 <?php
 /**
- * 共享内存 + 信号量
+ * 共享内存 + 信号量 实现原子操作
  */
 
-// 创建key
+// 创建该脚本粒度key
 $ftoken = ftok(__FILE__, 't');
 
 // 创建共享内存
 $shmId = shmop_open($ftoken, 'c', 0655, 1024);
 
-//加入信号量
+// 加入信号量
 $signal = sem_get($ftoken);
 
 /*
@@ -19,6 +19,7 @@ $data = shmop_read($shmId, 1, 18);
 var_dump($data);
 */
 
+// 创建子进程
 $arrChildren = array();
 for ($i = 0; $i < 3; $i++) {
     $pid = pcntl_fork();
@@ -49,6 +50,7 @@ for ($i = 0; $i < 3; $i++) {
     // fork子进程失败
     } else if ($pid == -1) {
         exit('fork fail!');   
+    // 父进程
     } else {
         $arrChildren[$pid] = $pid;
     }
