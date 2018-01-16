@@ -81,7 +81,7 @@ casper.start('https://s.1688.com/', function() {
             );
             // 等待搜索结果页打开
             this.waitForUrl(
-                /company_search\.htm/, 
+                /s\.1688\.com\/company\/company_search\.htm/,
                 function then() {
                     searchResultPage.call(this);
                 },
