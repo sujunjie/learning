@@ -27,6 +27,8 @@ casper.then(function() {
     this.wait(waitMilliSecond, function(){
         this.echo(this.page.url);
         this.echo(this.getTitle());
+        //this.echo(this.getPageContent());
+        //require('utils').dump(this.page.cookies);
         this.capture('c.png');
     });
 });
