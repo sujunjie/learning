@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<style>
+    @-webkit-keyframes loading {
+        from {
+            opacity: .5
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    ul {
+        width: 400px;
+    }
+    ul li {
+        list-style: none;
+        height: 10px;
+        margin-bottom: 10px;
+        background-color: #ccc;
+        -webkit-animation: loading .5s 0s linear infinite alternate;
+    }
+
+
+     @keyframes mask{
+        0% {-webkit-mask-position:0px 0px;}
+        25% {-webkit-mask-position:619px 0px;}
+        50% {-webkit-mask-position:0px 0px;}
+        75% {-webkit-mask-position:308px 0px;-webkit-mask-size:100%;}
+        100% {-webkit-mask-size:1000%;}
+     }
+
+    .mask{
+        width:700px;
+        height:392px;
+        background:black url("http://img.blog.csdn.net/20170701233330967");
+        -webkit-mask-image:url("http://img.blog.csdn.net/20170701233352262");
+        -webkit-animation:mask 5s linear infinite alternate, loading .5s 0s linear infinite alternate;
+    }
+</style>
+</head>
+
+<body>
+    <div class="mask"> </div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
