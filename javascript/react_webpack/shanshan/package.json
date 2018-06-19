@@ -1,0 +1,25 @@
+{
+  "name": "shanshan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "webpack": "^4.12.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --open",
+    "build": "webpack -p"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
